@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,9 +8,9 @@
     tools:context=".MainActivity">
 
     <TabHost
+        android:id="@+id/tabHost"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tabHost">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -18,54 +18,54 @@
             android:orientation="vertical">
 
             <TabWidget
+                android:id="@android:id/tabs"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@android:id/tabs"/>
+                android:layout_height="wrap_content" />
             <!-- 注意：TabWidget的id是固定的 -->
 
             <FrameLayout
+                android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@android:id/tabcontent">
+                android:layout_height="match_parent">
                 <!-- FrameLayout的id也是固定的 -->
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
                     android:id="@+id/tab1"
-                    >
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
                     <ImageView
+                        android:id="@+id/tv1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/img1"
-                        android:id="@+id/tv1"/>
+                        android:src="@drawable/img1" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
                     android:id="@+id/tab2"
-                    >
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
                     <TextView
+                        android:id="@+id/tv2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/tv2"
-                        android:text="@string/tv2_name"/>
+                        android:text="@string/tv2_name" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
                     android:id="@+id/tab3"
-                    >
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
                     <ImageView
+                        android:id="@+id/tv3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/img2"
-                        android:id="@+id/tv3"/>
+                        android:src="@drawable/img2" />
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>
     </TabHost>
 
-</FrameLayout>
+</LinearLayout>
